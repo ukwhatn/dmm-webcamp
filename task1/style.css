@@ -1,0 +1,96 @@
+html {
+    /* colors */
+    --accent-color: #ff9a4b;
+    --content-background-color: #eeeeee;
+    --footer-background-color: #aaaaaa;
+
+    /* font */
+    font-family: sans-serif;
+}
+
+header, footer {
+    width: 100%;
+    height: 50px;
+}
+
+header {
+    background-color: var(--accent-color);
+}
+
+footer {
+    background-color: var(--footer-background-color);
+}
+
+main {
+    width: 100%;
+    max-width: 960px;
+    margin: 50px auto;
+}
+
+.step-contents {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.step-contents .content {
+    background-color: var(--content-background-color);
+    flex: 0 1 300px;
+    padding: 10px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.step-contents .content .content-img {
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.step-contents .content.content-1 .content-img {
+    background-image: url("img/flow01.png")
+}
+
+.step-contents .content.content-2 .content-img {
+    background-image: url("img/flow02.png")
+}
+
+.step-contents .content.content-3 .content-img {
+    background-image: url("img/flow03.png")
+}
+
+.step-contents .content .content-step-index {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    background-color: var(--accent-color);
+    padding: 0.25em;
+    font-weight: lighter;
+}
+
+.step-contents .content .content-title {
+    margin: 15px 0 5px 0;
+    font-weight: normal
+}
+
+.step-contents .content .content-text {
+    margin: 0;
+    font-weight: lighter;
+}
+
+@media screen and (max-width: 768px) {
+    .step-contents {
+        display: block;
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+    .step-contents .content-2 {
+        margin: 20px 0;
+    }
+}
+
