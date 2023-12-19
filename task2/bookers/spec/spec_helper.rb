@@ -14,6 +14,7 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'capybara/rspec'
+require 'formatter/category_formatter'
 #Capybara.javascript_driver = :webkit
 RSpec.configure do |config|
 	config.before(:each, type: :system) do
@@ -103,4 +104,8 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+
+  if ENV['MENTOR_CHECK']
+    config.add_formatter CategoryFormatter
+  end
 end
